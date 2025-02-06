@@ -8,7 +8,16 @@ public class app{
 		JFrame frame = new JFrame("hellooo");
 		frame.setSize(300,300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
+		JMenuBar mb = new JMenuBar();
+		JMenu fm = new JMenu("File");
+		JMenuItem openitem = new JMenuItem("open");
+		JMenuItem exititem = new JMenuItem("exit");
+		fm.add(openitem);
+		fm.addSeparator();
+		fm.add(exititem);
+		mb.add(fm);
+
 		JPanel panel = new JPanel();
 		JButton button = new JButton("click me");
 
@@ -16,6 +25,7 @@ public class app{
 		panel.add(button);
 
 		frame.add(panel);
+		frame.setJMenuBar(mb);
 		frame.setLayout(null);
 		frame.setVisible(true);
 	}
